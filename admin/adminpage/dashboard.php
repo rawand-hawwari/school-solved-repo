@@ -97,6 +97,10 @@
               <!-- product prewiew -->
               <?php  include_once 'includes/productpreview.php'?>
               <!-- end product oreview -->
+
+               <!-- Menu -->
+              <?php  include_once '../../footer.php';?>
+              <!-- / Menu -->
           </div>
         </div>
       </div>

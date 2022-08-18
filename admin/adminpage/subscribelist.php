@@ -103,13 +103,13 @@
                         echo '<div class="col-md-6">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    <h3 class="text-dark">' . $row['fullname'] . '</h3>
-                                    <h5 class="text-secondary">' . $row['phone'] . '</h5>
+                                    <h3 class="text-dark mt-2">' . $row['fullname'] . '</h3>
+                                    <p class="text-secondary">' . $row['phone'] . '</p>
                                 </div>
                                 <div class="card-header">
-                                    <h5 class="text-dark">' . $row['message'] . '</h3>
+                                    <h5 class="text-dark">' . $row['message'] . '</h5>
                                 </div>
-                                <h5 class="card-footer text-dark">' . $row['email'] . '</h5>
+                                <p class="card-footer text-dark mb-0">' . $row['email'] . '</p>
                             </div>
                             </div>';
                       }

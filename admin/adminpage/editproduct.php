@@ -133,7 +133,7 @@
                             </div>
                           </div>
                           <div class="mb-3 col">
-                            <label for="sale" class="form-label">Sale</label>
+                            <label for="sale" class="form-label">Sale in decimal</label>
                             <div class="input-group">
                               <input type="text" class="form-control" placeholder="<?php echo $row['sale']?>" aria-describedby="button-addon4" name="sale"/>
                               <button class="btn btn-outline-primary" type="button" id="button-addon4">Change</button>
