@@ -93,6 +93,10 @@
               <!-- header -->
               <?php  include_once '../../header.php';?>
               <!-- /header -->
+
+              <!-- product prewiew -->
+              <?php  include_once 'includes/productpreview.php'?>
+              <!-- end product oreview -->
           </div>
         </div>
       </div>
