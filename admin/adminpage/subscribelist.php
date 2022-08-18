@@ -5,17 +5,6 @@
    if(!isset($_SESSION['username'])){
      header('location: /demo/home.php?error=youHaveNoAccessOnPage');
    }
-   else{
-    $username = $_SESSION['username'];
-    $sql = "SELECT role FROM user WHERE username = '$username' OR email='$username';";
-    $result = $db->query($sql);
-    $row = $result -> fetch_assoc();
-
-    $role = $row['role'];
-    if($role != 'admin'){
-     header('location: /demo/admin/adminpage/dashboard.php?error=youHaveNoAccessOnPage');
-    }
-   }
 ?>
 
 <!DOCTYPE html>
@@ -85,73 +74,46 @@
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
-
+          
           <!-- header -->
           <?php  include_once '../../header.php';?>
           <!-- /header -->
-
+          
           <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">User List</span>
+                <span class="text-muted fw-light">Subscription List</span>
               </h4>
               
               
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
-                    <h5 class="card-header">Users Details</h5>
+                    <!-- <h5 class="card-header">Users Details</h5> -->
                     <!-- Account -->
                     <hr class="my-0" />
                     <div class="card-body">
                       <?php
-                        $sql = "SELECT * FROM user";
+                        $sql = "SELECT * FROM subscribes";
                         $result = mysqli_query($db,$sql);
 
-                        echo "<table border='1'class='table table-striped'>
-                        <thead>
-                        <tr>
-                        <th>id</th>
-                        <th>Username</th>
-                        <th>firstname</th>
-                        <th>lastname</th>
-                        <th>Email</th>
-                        <th>role</th>
-                        </tr>
-                        </thead>
-                        <tbody>";
-                        
-                        while($row = $result -> fetch_assoc())
-                        {
-                            echo "<tr>";
-                            echo "<td>" . $row['id'] . "</td>";
-                            echo "<td>" . $row['username'] . "</td>";
-                            echo "<td>" . $row['firstname'] . "</td>";
-                            echo "<td>" . $row['lastname'] . "</td>";
-                            echo "<td>" . $row['email'] . "</td>";
-                            echo "<td>" . $row['role'] . "</td>";
-                            echo '<td><button type="button" class="btn btn-danger confirm-delete" data-bs-toggle="modal" data-bs-target="#confirm' . $row['id'] . '"><i class="far fa-trash-alt"></i> Delete</button>
-                                  <div class="modal fade" id="confirm' . $row['id'] . '" tabindex="-1">
-                                    <div class="modal-dialog">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h5 class="modal-title">System</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                          <h4 class ="text-center">Are you sure you want to delete this data?</h4>
-                                        </div>
-                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-danger px-3" data-bs-dismiss="modal">No</button>
-                                          <a type="button" class="btn btn-success px-3" href="includes/delete.php?Message=' . $row['id'] . '">Yes</a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div></td>
-                                  ';
-                            echo "</tr>";
-                        }
-                        echo "</tbody>
-                              </table>";
+                        echo '<div class="row">';
+
+                      while($row = $result -> fetch_assoc()){
+                        echo '<div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3 class="text-dark">' . $row['fullname'] . '</h3>
+                                    <h5 class="text-secondary">' . $row['phone'] . '</h5>
+                                </div>
+                                <div class="card-header">
+                                    <h5 class="text-dark">' . $row['message'] . '</h3>
+                                </div>
+                                <h5 class="card-footer text-dark">' . $row['email'] . '</h5>
+                            </div>
+                            </div>';
+                      }
+                        echo '</div>';
                       ?>
 
                     </div>
@@ -159,8 +121,6 @@
                   </div>
                 </div>
               </div>
-
-              <button class="btn me-2 add" onclick="window.location.href ='addUser.php'">Add user</button>
             </div>
             <!-- / Content -->
 

@@ -52,7 +52,7 @@
 
         <!-- Layouts -->
         <li class="menu-item">
-          <a href="index.html" class="menu-link">
+          <a href="#" class="menu-link">
             <i class="menu-icon tf-icons bx bx-layout"></i>
             <div data-i18n="Layouts">Layouts</div>
           </a>
@@ -68,13 +68,13 @@
           </a>
         </li>
         <li class="menu-item">
-          <a href="index.html" class="menu-link">
+          <a href="#" class="menu-link">
             <i class="menu-icon tf-icons bx bx-coin"></i>
             <div data-i18n="Authentications">Pricing</div>
           </a>
         </li>
         <li class="menu-item">
-          <a href="index.html" class="menu-link">
+          <a href="#" class="menu-link">
             <i class="menu-icon tf-icons bx bx-envelope"></i>
             <div data-i18n="Misc">Contact</div>
           </a>
@@ -94,7 +94,7 @@
         ?>
         <!-- Articles -->
         <li class="menu-item">
-          <a href="index.html" class="menu-link">
+          <a href="#" class="menu-link">
             <i class="menu-icon tf-icons bx bx-file"></i>
             <div data-i18n="User interface">Articles</div>
           </a>
@@ -102,7 +102,7 @@
 
         <!-- Subscription -->
         <li class="menu-item">
-          <a href="index.html" class="menu-link">
+          <a href="subscribelist.php" class="menu-link">
             <i class="menu-icon tf-icons bx bx-book-reader"></i>
             <div data-i18n="Extended UI">Subscribes</div>
           </a>
@@ -110,7 +110,7 @@
         
         <!-- Cards -->
         <li class="menu-item">
-          <a href="cards-basic.html" class="menu-link">
+          <a href="#" class="menu-link">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div data-i18n="Basic">Cards</div>
           </a>

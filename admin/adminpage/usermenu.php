@@ -9,14 +9,14 @@
     <!-- <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" /> -->
     <?php 
         $username = $_SESSION['username'];
-        $sql = "SELECT firstname,lastname,role FROM user WHERE username = '$username' OR email='$username';";
+        $sql = "SELECT username,firstname,lastname,role FROM user WHERE username = '$username' OR email='$username';";
         $result = $db->query($sql);
         $row = $result -> fetch_assoc();
 
         $role = $row['role'];
         $name = $row['firstname'] . " " . $row['lastname'];
 
-        echo'<span class="fw-bold d-block text-center mt-2 username">' . $name . '</span>';   
+        echo'<span class="fw-bold d-block text-center mt-2 username">' . $row['username'] . '</span>';   
     ?>
     </div>
 </a>

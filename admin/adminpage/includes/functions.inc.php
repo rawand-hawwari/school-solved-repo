@@ -101,9 +101,17 @@
     }
 
 
-
+    // empty inputs for ptoduct form
     function emptyForm($targetFilePath, $name, $details, $price){
         if(empty($targetFilePath) || empty($name) || empty($details) || empty($price)){
+            return true;
+        }
+        return false;
+    }
+
+    // empty input for subscription form
+    function eInputs($fname, $email, $phone, $msg){
+        if(empty($fname) || empty($email) || empty($phone) || empty($msg)){
             return true;
         }
         return false;

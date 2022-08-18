@@ -220,11 +220,11 @@
 
           <div class="col-12 col-lg-8 pt-5">
             <div>
-              <form class="mb-3 submetion" action="#" method="post">
-                <input type="text" class="form-control mr-sm-2 m-2 name" placeholder="Full Name">
-                <input id="email" class="form-control mr-sm-2 m-2" type="email" placeholder="Email" aria-label="Email">
-                <input class="form-control mr-sm-2 phone m-2" type="phone" placeholder="Phone Number (555) 555 5555" pattern="\(\d{3}\) \d{3} \d{4}">
-                <input class="form-control mr-sm-2 msg m-2" type="text" placeholder="message">
+              <form class="mb-3 submetion" action="admin/adminpage/subscribes.php" method="post">
+                <input type="text" name="fullName" class="form-control mr-sm-2 m-2 name" placeholder="Full Name">
+                <input id="email" name="email" class="form-control mr-sm-2 m-2" type="email" placeholder="Email" aria-label="Email">
+                <input name="phone" class="form-control mr-sm-2 phone m-2" type="phone" placeholder="Phone Number (555) 555 5555" pattern="\(\d{3}\) \d{3} \d{4}">
+                <input name="message" class="form-control mr-sm-2 msg m-2" type="text" placeholder="message">
                 <button id="subscribe" class="btn" type="submit">Subscribe</button> <br>
                 
                 <div class="popup d-none">
