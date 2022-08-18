@@ -1,0 +1,34 @@
+:root{
+    --maincolor:#96BB7C;
+    --darkblue:#252B42;
+    --grey:#737373;
+    --white:#FFFFFF;
+    --red:#E74040;
+    --bs-primary:var(--maincolor);
+}
+
+
+/* add user page */
+.adduser-page{
+    background-color: var(--bs-body-bg);
+}
+.add{
+    color: var(--white);
+    background-color: var(--maincolor);
+    outline-color: var(--maincolor);
+}
+/* end add user page */
+
+/* menu page */
+.menu a{
+    text-decoration: none;
+}
+/* end menu page */
+
+
+
+/* menu page */
+.menupage{
+    float: left;
+}
+/* end menu page */
