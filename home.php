@@ -2,7 +2,7 @@
   include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
 
 
-  if (!isset($_GET['Message'])) {
+  if (isset($_GET['Message'])) {
     if($_GET['Message'] == "successful_log_out"){
       echo "<script type='text/javascript'>alert('user have logged out'); </script>";
       

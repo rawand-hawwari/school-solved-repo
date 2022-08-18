@@ -48,7 +48,7 @@
         </div>
     
         <div class="reels">
-          <div class="row justify-content-center">
+          <div class="row justify-content-start">
             <?php
               $sql = "SELECT * FROM products";
               $result = mysqli_query($db,$sql);
