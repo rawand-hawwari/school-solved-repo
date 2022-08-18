@@ -19,7 +19,7 @@ $sale = $_POST['sale'];
 include_once 'functions.inc.php';
 
 
-if(!emptyForm($targetFilePath, $name, $details, $price, $sale)){
+if(!emptyForm($fileName, $name, $details, $price, $sale)){
 
     // Allow certain file formats
     $allowTypes = array('jpg','png','jpeg','gif','pdf');

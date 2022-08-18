@@ -114,7 +114,36 @@
                                   <h6 class='mt-2 ";
                                   if($row['sale'] == 0.00) echo"fade";
                                   echo "'>Sale</h6>
-                                  <button type='button' class='btn btn-danger confirm-delete' data-bs-toggle='modal' data-bs-target='#confirm" . $row['id'] . "'><i class='far fa-trash-alt'></i> Delete</button>
+                                  <div class='nav-item navbar-dropdown dropdown-user dropdown'>
+                                    <a class='nav-link hide-arrow rounded text-dark product-settings' href='javascript:void(0);' data-bs-toggle='dropdown' aria-expanded='false'>
+                                    <i class='fas fa-bars'></i></a>
+
+                                    <ul id='settings' class='dropdown-menu dropdown-menu-end'>
+                                      <li>
+                                      <a class='dropdown-item' href='editproduct.php?Message=" . $row['id'] . "'>
+                                          <i class='far fa-edit me-2'></i>
+                                          <span class='align-middle'>Edit</span>
+                                      </a>
+                                      </li>
+                                      <li>
+                                      <a class='dropdown-item confirm-delete' data-bs-toggle='modal' data-bs-target='#confirm" . $row['id'] . "'>
+                                          <i class='far fa-trash-alt me-2'></i>
+                                          <span class='align-middle'>Delete</span>
+                                      </a>
+                                      </li>
+                                      <li>
+                                      <div class='dropdown-divider'></div>
+                                      </li>
+                                      <li>
+                                      <a class='dropdown-item' href='#'>
+                                          <span class='align-middle'>Pin</span>
+                                      </a>
+                                      </li>
+                                  </ul>
+                                  </div>
+
+
+                                  
                                   <div class='modal fade' id='confirm" . $row['id'] . "' tabindex='-1'>
                                     <div class='modal-dialog'>
                                       <div class='modal-content'>

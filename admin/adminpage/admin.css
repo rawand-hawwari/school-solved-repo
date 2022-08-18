@@ -36,3 +36,8 @@
 .username{
     color: var(--maincolor);
 }
+
+
+.product-settings:hover{
+    background-color: lightgrey;
+}

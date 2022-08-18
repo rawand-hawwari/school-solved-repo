@@ -6,6 +6,13 @@
     header('location: /demo/home.php?error=youHaveNoAccessOnPage');
   }
 
+  $id;
+  if (isset($_GET['Message'])) {
+    $id = $_GET['Message'];
+  }
+  else{
+    header('location: /demo/admin/adminpage/productlist.php?error=noItemSelected');
+  }
 ?>
 
 
@@ -81,11 +88,16 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Add new product /</span>
+                <span class="text-muted fw-light">Edit Product/</span>
                 " Products
               </h4>
               
-              
+              <?php
+
+                $sql = "SELECT * FROM products WHERE id = " . $id;
+                $result = mysqli_query($db,$sql);
+                $row = $result -> fetch_assoc();              
+              ?>
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
@@ -93,31 +105,43 @@
                     <!-- Account -->
                     <hr class="my-0" />
                     <div class="card-body">
-                      <form id="formAccountSettings" action="includes/newproduct.php" method="POST">
+                      <form id="formAccountSettings" action=<?php echo"includes/updateproduct.php?Message=".$id ?> method="POST">
                         <div class="row flex-column">
                           <div class="mb-3 col">
-                            <label for="image" class="form-label">Choose an image:</label>
+                            <label for="image" class="form-label">Image:</label>
                             <input class="form-control" type="file" name="file">
                           </div>
                           <div class="mb-3 col">
                             <label for="name" class="form-label">Name</label>
-                            <input class="form-control" type="text" id="name" name="name"/>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="<?php echo $row['name']?>" aria-describedby="button-addon1" name="name"/>
+                              <button class="btn btn-outline-primary" type="button" id="button-addon1">Change</button>
+                            </div>
                           </div>
                           <div class="mb-3 col">
                             <label for="deatils" class="form-label">Details</label>
-                            <input type="text" class="form-control" id="details" name="details"/>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="<?php echo $row['details']?>" aria-describedby="button-addon2" name="details"/>
+                              <button class="btn btn-outline-primary" type="button" id="button-addon2">Change</button>
+                            </div>
                           </div>
                           <div class="mb-3 col">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" class="form-control" id="price" name="price"/>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="<?php echo $row['price']?>" aria-describedby="button-addon3" name="price"/>
+                              <button class="btn btn-outline-primary" type="button" id="button-addon3">Change</button>
+                            </div>
                           </div>
                           <div class="mb-3 col">
                             <label for="sale" class="form-label">Sale</label>
-                            <input type="text" class="form-control" id="sale" name="sale" placeholder="Enter as decimal number"/>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="<?php echo $row['sale']?>" aria-describedby="button-addon4" name="sale"/>
+                              <button class="btn btn-outline-primary" type="button" id="button-addon4">Change</button>
+                            </div>
                           </div>
                         </div>
                         <div class="mt-2">
-                          <button type="submit" class="btn me-2 add" name="submit ">Add user</button>
+                          <button type="submit" class="btn me-2 add" name="submit ">Save Changes</button>
                           <button type="reset" class="btn btn-outline-secondary" onclick='window.location.href ="/demo/admin/adminpage/productlist.php"'>Cancel</button>
                         </div>
                       </form>

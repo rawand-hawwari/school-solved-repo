@@ -102,8 +102,16 @@
 
 
     // empty inputs for ptoduct form
-    function emptyForm($targetFilePath, $name, $details, $price){
-        if(empty($targetFilePath) || empty($name) || empty($details) || empty($price)){
+    function emptyForm($fileName, $name, $details, $price, $sale){
+        if(empty($fileName) || empty($name) || empty($details) || empty($price) || empty($sale)){
+            return true;
+        }
+        return false;
+    }
+
+    // all inputs for ptoduct form are empty
+    function allEmpty($fileName, $name, $details, $price, $sale){
+        if(empty($fileName) && empty($name) && empty($details) && empty($price) && empty($sale)){
             return true;
         }
         return false;
