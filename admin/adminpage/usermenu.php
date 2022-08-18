@@ -16,7 +16,7 @@
         $role = $row['role'];
         $name = $row['firstname'] . " " . $row['lastname'];
 
-        echo'<span class="fw-bold d-block text-center mt-2">' . $name . '</span>';   
+        echo'<span class="fw-bold d-block text-center mt-2 username">' . $name . '</span>';   
     ?>
     </div>
 </a>
