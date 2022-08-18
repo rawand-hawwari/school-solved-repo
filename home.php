@@ -168,7 +168,7 @@
               $i = 0;
               while($row = $result -> fetch_assoc()){
                 if($i == 4){
-                  exit;
+                  break;;
                 }
                   $newprice = $row['price'] * $row['sale'];  
                   echo "<div class='col-6 col-lg-3 my-3'>
