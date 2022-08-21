@@ -23,6 +23,11 @@
         if(password_verify($mypassword, $row['password'])){
           $_SESSION['username'] = $myusername;
 
+          $date = date("d/m/y g:i a");
+          $sql = "UPDATE user SET lastlogin = '$date' WHERE username = '$myusername' or email = '$myusername'";
+          $result = $db->query($sql);
+
+
           header("location: admin/adminpage/dashboard.php?Message=successful_log_in");
           
         }
@@ -103,10 +108,9 @@
                         <label class="form-check-label" for="form2Example31"> Remember me </label>
                     </div>
                 </div>
-            
                 <div class="col">
                 <!-- Simple link -->
-                <a href="#!">Forgot password?</a>
+                <a href="admin/adminpage/forgotpwd.php">Forgot password?</a>
                 </div>
             </div>
             

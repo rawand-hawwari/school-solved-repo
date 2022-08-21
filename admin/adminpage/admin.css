@@ -41,3 +41,44 @@
 .product-settings:hover{
     background-color: lightgrey;
 }
+
+.set-password-page{
+    background-color: #defbc9;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner:before{
+    content: none;
+}
+
+.light-style .authentication-wrapper.authentication-basic .authentication-inner:after{
+    content: none;
+}
+
+.set-password-page .send{
+    background-color: var(--maincolor);
+    color: var(--white);
+    border-color: var(--maincolor);
+}
+
+.set-password-page .back-login{
+    color: var(--maincolor);
+}
+.set-password-page .back-login:hover{
+    color: var(--grey);
+}
+
+.user-page .prod-pic{
+    width: 100%;
+    height: auto;
+}
+
+.user-page .pic-col{
+    width: 10%;
+}
+
+.user-page .confirm-delete{
+    color: #dc3545;
+}
+.user-page .confirm-delete:hover{
+    color: var(--white);
+}

@@ -100,12 +100,28 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
-                    <h5 class="card-header">Users Details</h5>
+                  <div class="card-header d-flex justify-content-between p-3">
+                    <h5 class="m-0 align-self-center">Users Details</h5>
+                    <button class="btn me-2 add" onclick="window.location.href ='addUser.php'">Add user</button>
+                  </div>
+
                     <!-- Account -->
                     <hr class="my-0" />
                     <div class="card-body">
                       <?php
-                        $sql = "SELECT * FROM user";
+                        if(isset($_GET['page'])){
+                          $page = $_GET['page'];
+                        }else $page="";
+  
+  
+                        if($page == "" || $page == "1"){
+                          $page="1";
+                        }
+  
+                        $start = 5 * ($page - 1);
+                        $rows = 5;
+  
+                        $sql = "SELECT * FROM user LIMIT $start,$rows";
                         $result = mysqli_query($db,$sql);
 
                         echo "<table border='1'class='table table-striped'>
@@ -117,6 +133,7 @@
                         <th>lastname</th>
                         <th>Email</th>
                         <th>role</th>
+                        <th>Last login</th>
                         </tr>
                         </thead>
                         <tbody>";
@@ -130,7 +147,8 @@
                             echo "<td>" . $row['lastname'] . "</td>";
                             echo "<td>" . $row['email'] . "</td>";
                             echo "<td>" . $row['role'] . "</td>";
-                            echo '<td><button type="button" class="btn btn-danger confirm-delete" data-bs-toggle="modal" data-bs-target="#confirm' . $row['id'] . '"><i class="far fa-trash-alt"></i> Delete</button>
+                            echo "<td>" . $row['lastlogin'] . "</td>";
+                            echo '<td><button type="button" class="btn btn-outline-danger confirm-delete" data-bs-toggle="modal" data-bs-target="#confirm' . $row['id'] . '"><i class="far fa-trash-alt"></i> Delete</button>
                                   <div class="modal fade" id="confirm' . $row['id'] . '" tabindex="-1">
                                     <div class="modal-dialog">
                                       <div class="modal-content">
@@ -155,12 +173,45 @@
                       ?>
 
                     </div>
+                    <div class="card-footer p-3">
+                      <?php
+                        $sql2 = "SELECT * FROM user";
+                        $resl = mysqli_query($db,$sql2);
+                        $count = $resl->num_rows;
+
+                        if(isset($_GET['page'])){
+                          $page = $_GET['page'];
+                        }else $page="";
+
+
+                        if($page == "" || $page == "1"){
+                          $page="1";
+                        }
+
+                        $next = $page + 1;
+                        $prev = $page - 1;
+
+                        $pages = ceil($count/5);
+
+
+                        echo'<ul class="pagination justify-content-center m-0">';
+                        echo'<li class="page-item ';
+                          if($prev == "0"){echo'disabled';} 
+                        echo'"><a class="page-link" href="usertlist.php?page=' . $prev . '">Previous</a></li>';
+                        for($b = 1; $b <= $pages; $b++){
+                          echo'<li class="page-item"><a class="page-link" href="usertlist.php?page=' . $b . '">' . $b . '</a></li>';
+                        }
+                        echo'<li class="page-item ';
+                          if($next == ($pages + 1)){echo'disabled';} 
+                        echo'"><a class="page-link" href="usertlist.php?page=' . $next . '">Next</a></li>';
+                        
+                        echo'</ul>';
+                      ?>
+                    </div>
                     <!-- /Account -->
                   </div>
                 </div>
               </div>
-
-              <button class="btn me-2 add" onclick="window.location.href ='addUser.php'">Add user</button>
             </div>
             <!-- / Content -->
 
