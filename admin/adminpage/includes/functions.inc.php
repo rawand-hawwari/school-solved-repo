@@ -85,7 +85,6 @@
         $stmt = $db->stmt_init();
 
         if(!$stmt = $db->prepare($sql)){
-            var_dump("wrong");die;
             header("location:../addUser.php?error=stmtfailed");
             exit();
         }
@@ -112,6 +111,14 @@
     // all inputs for ptoduct form are empty
     function allEmpty($fileName, $name, $details, $price, $sale){
         if(empty($fileName) && empty($name) && empty($details) && empty($price) && empty($sale)){
+            return true;
+        }
+        return false;
+    }
+
+    // all inputs for user form are empty
+    function isempty($uid, $fname, $lname, $email, $oldpwd, $newpwd, $cpwd){
+        if(empty($uid) && empty($fname) && empty($lame) && empty($email) && empty($oldpwd) && empty($newpwd) && empty($cpwd)){
             return true;
         }
         return false;
