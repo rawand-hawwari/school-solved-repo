@@ -120,6 +120,8 @@
                       <th>Details</th>
                       <th>Price</th>
                       <th>Sale</th>
+                      <th>Added date</th>
+                      <th>Last update</th>
                       </tr>
                       </thead>
                       <tbody>";
@@ -133,16 +135,18 @@
                           echo "<td>" . $row['details'] . "</td>";
                           echo "<td>" . $row['price'] . "</td>";
                           echo "<td>" . $row['sale'] . "</td>";
+                          echo "<td>" . $row['addDate'] . "</td>";
+                          echo "<td>" . $row['updateDate'] . "</td>";
                           echo '<td>
-                                  <a class="btn btn-outline-secondary" href="editproduct.php?Message=' . $row['id'] . '">
-                                    <i class="far fa-edit me-2"></i>
+                                  <a class="btn btn-outline-secondary d-flex" href="editproduct.php?Message=' . $row['id'] . '">
+                                    <i class="far fa-edit me-2 align-self-center"></i>
                                     <span class="align-middle">Edit</span>
                                   </a>
                                 </td>';
                           echo "<td>
                                   <div>
-                                    <a class='btn btn-outline-danger confirm-delete' data-bs-toggle='modal' data-bs-target='#confirm" . $row['id'] . "'>
-                                      <i class='far fa-trash-alt me-2'></i>
+                                    <a class='btn btn-outline-danger confirm-delete d-flex' data-bs-toggle='modal' data-bs-target='#confirm" . $row['id'] . "'>
+                                      <i class='far fa-trash-alt me-2 align-self-center'></i>
                                       <span class='align-middle'>Delete</span>
                                     </a>
 

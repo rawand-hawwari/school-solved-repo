@@ -4,8 +4,24 @@
 
   if (isset($_GET['Message'])) {
     if($_GET['Message'] == "successful_log_out"){
-      echo "<script type='text/javascript'>alert('user have logged out'); </script>";
-      
+
+      echo'<button type="button" class="btn btn-primary d-none show-error" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>';
+      echo'<div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">ERROR</h5>
+                </div>
+                <div class="modal-body">
+                  <p>user have logged out.</p>
+                </div>
+                <div class="modal-footer">
+                  <a type="button" class="btn btn-primary" href="/demo/home.php">OK</a>                  
+                </div>
+              </div>
+            </div>
+          </div>
+        ';
     }
   }
   if(isset($_SESSION['username'])){

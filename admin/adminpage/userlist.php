@@ -148,7 +148,7 @@
                             echo "<td>" . $row['email'] . "</td>";
                             echo "<td>" . $row['role'] . "</td>";
                             echo "<td>" . $row['lastlogin'] . "</td>";
-                            echo '<td><button type="button" class="btn btn-outline-danger confirm-delete" data-bs-toggle="modal" data-bs-target="#confirm' . $row['id'] . '"><i class="far fa-trash-alt"></i> Delete</button>
+                            echo '<td><button type="button" class="btn btn-outline-danger confirm-delete d-flex" data-bs-toggle="modal" data-bs-target="#confirm' . $row['id'] . '"><i class="far fa-trash-alt align-self-center"></i> Delete</button>
                                   <div class="modal fade" id="confirm' . $row['id'] . '" tabindex="-1">
                                     <div class="modal-dialog">
                                       <div class="modal-content">

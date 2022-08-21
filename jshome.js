@@ -74,3 +74,10 @@
     
     // check for modal in login
       $('.show-error').click();
+
+
+
+      //delete msg for login and logout
+      $(document).ready(function(){
+        $("#myModal").modal('show');
+    });

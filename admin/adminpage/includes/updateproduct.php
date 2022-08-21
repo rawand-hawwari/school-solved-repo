@@ -21,6 +21,10 @@
         exit;
     }
     else{
+        $date =date('d/m/y g:i a');
+        $sql = "UPDATE products SET updateDate ='$date' WHERE id = ". $_GET['Message'];
+        $db->query($sql);
+
         $allowTypes = array('jpg','png','jpeg','gif','pdf');
         if(in_array($fileType, $allowTypes) || empty($fileName)){
             if(!empty($fileName)){

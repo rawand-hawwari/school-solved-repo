@@ -15,6 +15,8 @@ $name = $_POST['name'];
 $details = $_POST['details'];
 $price = $_POST['price'];
 $sale = $_POST['sale'];
+$date = date('d/m/y g:i a');
+
 
 include_once 'functions.inc.php';
 
@@ -26,7 +28,7 @@ if(!emptyForm($fileName, $name, $details, $price, $sale)){
     if(in_array($fileType, $allowTypes)){
         
         // Insert image file name into database
-        $sql = "INSERT INTO products (img, name, details, price, sale) VALUES ('$targetFilePath', '$name', '$details', $price, $sale)";
+        $sql = "INSERT INTO products (img, name, details, price, sale, addDate) VALUES ('$targetFilePath', '$name', '$details', $price, $sale, '$date')";
         $result = $db->query($sql);
         // $insert = $db->query("INSERT INTO products (img, name, details, price, sale) VALUES ('$targetFilePath', '$name', '$details', '$price', '$sale'");
         if($result){
