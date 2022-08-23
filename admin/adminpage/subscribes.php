@@ -11,6 +11,8 @@
     $phone = $_POST["phone"];
     $msg = $_POST["message"];
 
+    $date = date('d/m/y g:i a');
+
 
     include_once 'includes/functions.inc.php';
 
@@ -19,7 +21,7 @@
         exit();
     }
     else{
-        $sql = "INSERT INTO subscribes (fullname, email, phone, message) VALUES ('$fname', '$email', '$phone', '$msg')";
+        $sql = "INSERT INTO subscribes (fullname, email, phone, message, publishDate) VALUES ('$fname', '$email', '$phone', '$msg', '$date')";
         $result = $db->query($sql);
         header("location:/demo/home.php?error=none");
     }

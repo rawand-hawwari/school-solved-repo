@@ -104,12 +104,13 @@
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <h3 class="text-dark mt-2">' . $row['fullname'] . '</h3>
+                                    <p class="text-secondary mb-0">' . $row['email'] . '</p>
                                     <p class="text-secondary">' . $row['phone'] . '</p>
                                 </div>
                                 <div class="card-header">
                                     <h5 class="text-dark">' . $row['message'] . '</h5>
                                 </div>
-                                <p class="card-footer text-dark mb-0">' . $row['email'] . '</p>
+                                <p class="card-footer text-secondary mb-0">' . $row['publishDate'] . '</p>
                             </div>
                             </div>';
                       }
