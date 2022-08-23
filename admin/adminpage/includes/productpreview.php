@@ -34,13 +34,15 @@
             if($i == 4){
                 break;;
             }
-                $newprice = $row['price'] * $row['sale'];  
+                $newprice = $row['price'] * ($row['sale']/100);  
                 echo "<div class='col-6 col-lg-3 my-3'>
                 <div class='sale'>
                     <div class='vid'>
                     <img src='" . $row['img'] . "' alt>
                     <div class='sale-wrapper d-flex justify-content-between pe-3'>
-                    <h6>Sale</h6>
+                      <h6 class='mt-2 ";
+                      if($row['sale'] == 0) echo"fade";
+                      echo "'>Sale</h6>
                     </div>
                     <div class='text-center buttons'>
                     <button onclick='changeicon(this)' class='btn heart'><i class='far fa-heart'></i></button>
@@ -55,11 +57,11 @@
                     </div>
                     <h5>" . $row['name'] . "</h5>
                     <p>" . $row['details'] . "</p>
-                    <h6><i class='fa fa-download'></i> " . $row['sale']*100 . " Sales</h6>
+                    <h6><i class='fa fa-download'></i> " . $row['sale'] . " Sales</h6>
                     <div class='price'>
-                    <h5 class='before'>$" . $row['price'] . "</h5>
-                    <h5 class='after'>$" . $newprice . "</h5>
-                    </div>                        
+                    <h5 class='before'>$" . $row['price'] . "</h5>";
+                      if($row['sale'] != 0) echo "<h5 class='after'>$" . $newprice . "</h5>";
+                    echo" </div>                            
                     <a href='#' class='btn btn-outline-primary rounded-pill' type='submit'>Learn More <i class='fas fa-angle-right'></i></a>
                 </div>
                 </div>
