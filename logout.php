@@ -6,6 +6,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
 
 session_destroy();
 
-header("location: home.php?Message=successful_log_out");
+header("location: index.php?Message=successful_log_out");
 
 ?>

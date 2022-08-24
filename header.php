@@ -18,7 +18,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <?php if(!isset($_SESSION['username'])){
-                    echo'<a class="nav-link active" aria-current="page" href="/demo/home.php">Home</a>';
+                    echo'<a class="nav-link active" aria-current="page" href="/demo/index.php">Home</a>';
                   }
                   else{                    
                     echo'<a class="nav-link active" aria-current="page" href="/demo/admin/adminpage/dashboard.php">Home</a>';

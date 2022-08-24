@@ -16,7 +16,7 @@
                   <p>user have logged out.</p>
                 </div>
                 <div class="modal-footer">
-                  <a type="button" class="btn btn-primary" href="/demo/home.php">OK</a>                  
+                  <a type="button" class="btn btn-primary" href="/demo/index.php">OK</a>                  
                 </div>
               </div>
             </div>

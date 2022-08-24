@@ -3,7 +3,7 @@
 
 
   if(!isset($_SESSION['username'])){
-    header('location: /demo/home.php?error=youHaveNoAccessOnPage');
+    header('location: /demo/index.php?error=youHaveNoAccessOnPage');
   }
 
 ?>

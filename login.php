@@ -84,7 +84,7 @@
 
     <div class="container-md shadow p-3 mb-5 bg-body rounded login-signin">
         <form action="" method="post" class="my-3">
-            <h2 class="text-uppercase text-center mb-5"><a href="home.php" class="previous round back"><i class="fas fa-arrow-circle-left"></i></a>&nbsp; login</h2>
+            <h2 class="text-uppercase text-center mb-5"><a href="index.php" class="previous round back"><i class="fas fa-arrow-circle-left"></i></a>&nbsp; login</h2>
 
 
             <!-- Email input -->
