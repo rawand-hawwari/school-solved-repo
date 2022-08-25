@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
     function emptyInputs($fname, $lname, $username, $email, $role, $pwd, $cwd){
         $result;

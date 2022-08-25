@@ -1,7 +1,7 @@
 <?php
   
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
 
   
@@ -17,11 +17,11 @@
     include_once 'includes/functions.inc.php';
 
     if(eInputs($fname, $email, $phone, $msg) !== false){
-        header("location:/demo/index.php?error=emptyinput");
+        header("location: index.php?error=emptyinput");
         exit();
     }
     else{
         $sql = "INSERT INTO subscribes (fullname, email, phone, message, publishDate) VALUES ('$fname', '$email', '$phone', '$msg', '$date')";
         $result = $db->query($sql);
-        header("location:/demo/index.php?error=none");
+        header("location: index.php?error=none");
     }

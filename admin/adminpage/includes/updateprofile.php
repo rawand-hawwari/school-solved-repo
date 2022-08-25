@@ -1,6 +1,6 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
 
   include_once 'functions.inc.php';
 
@@ -15,7 +15,7 @@
   $cpwd = $_POST['cpwd'];
 
   if(!isset($_SESSION['username'])){
-    header('location: /demo/home.php?error=youHaveNoAccessOnPage');
+    header('location: /home.php?error=youHaveNoAccessOnPage');
   }
   else{
       $username = $_SESSION['username'];

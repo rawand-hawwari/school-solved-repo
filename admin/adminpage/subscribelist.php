@@ -1,9 +1,9 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
-   include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+   include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
+   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
    if(!isset($_SESSION['username'])){
-     header('location: /demo/index.php?error=youHaveNoAccessOnPage');
+     header('location: index.php?error=youHaveNoAccessOnPage');
    }
 ?>
 
@@ -41,8 +41,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="/demo/style.css">
-    <link rel="stylesheet" href="/demo/admin/adminpage/admin.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="/admin/adminpage/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -140,6 +140,6 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
 
-    <script src="/demo/jshome.js"></script> 
+    <script src="../../jshome.js"></script> 
   </body>
 </html>

@@ -1,9 +1,9 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
 
   if(!isset($_SESSION['username'])){
-    header('location: /demo/index.php?error=youHaveNoAccessOnPage');
+    header('location: index.php?error=youHaveNoAccessOnPage');
   }
 
 ?>
@@ -43,7 +43,7 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="/demo/style.css">
+    <link rel="stylesheet" href="../../../style.css">
     <link rel="stylesheet" href="admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -193,6 +193,6 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script src="/demo/jshome.js"></script> 
+    <script src="../../../jshome.js"></script> 
   </body>
 </html>

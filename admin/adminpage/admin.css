@@ -7,6 +7,9 @@
     --bs-primary:var(--maincolor);
 }
 
+.headercont{
+    flex-grow: .75;
+}
 
 /* add user page */
 .adduser-page{

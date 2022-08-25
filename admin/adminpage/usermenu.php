@@ -1,6 +1,6 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
-    include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 ?>
 <!-- User -->
 <div class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -59,7 +59,7 @@
         <div class="dropdown-divider"></div>
         </li>
         <li>
-        <a class="dropdown-item" href="/demo/logout.php">
+        <a class="dropdown-item" href="../../logout.php">
             <!-- <a class="nav-link logout d-flex" href="logout.php">Log out</a> -->
             <i class="bx bx-power-off me-2"></i>
             <span class="align-middle">Log Out</span>

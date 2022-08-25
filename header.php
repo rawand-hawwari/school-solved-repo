@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
 ?>
 <section class="header">
@@ -18,19 +18,19 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <?php if(!isset($_SESSION['username'])){
-                    echo'<a class="nav-link active" aria-current="page" href="/demo/index.php">Home</a>';
+                    echo'<a class="nav-link active" aria-current="page" href="index.php">Home</a>';
                   }
                   else{                    
-                    echo'<a class="nav-link active" aria-current="page" href="/demo/admin/adminpage/dashboard.php">Home</a>';
+                    echo'<a class="nav-link active" aria-current="page" href="/admin/adminpage/dashboard.php">Home</a>';
                   }
                 ?>
               </li>
               <li class="nav-item">
               <?php if(!isset($_SESSION['username'])){
-                    echo'<a class="nav-link" href="/demo/product.php">Product</a>';
+                    echo'<a class="nav-link" href="product.php">Product</a>';
                   }
                   else{
-                    echo' <a class="nav-link" href="/demo/admin/adminpage/productlist.php">Product</a>';
+                    echo' <a class="nav-link" href="/admin/adminpage/productlist.php">Product</a>';
                   }
                 ?>
               </li>

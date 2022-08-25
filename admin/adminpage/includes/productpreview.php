@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
 ?>
 
@@ -13,10 +13,10 @@
       <div class="d-flex justify-content-end">
         <?php 
           if(!isset($_SESSION['username'])){
-            echo'<a href="/demo/product.php">See More <i class="fas fa-angle-right"></i></a>';
+            echo'<a href="product.php">See More <i class="fas fa-angle-right"></i></a>';
           }
           else{                    
-            echo'<a href="/demo/admin/adminpage/productlist.php">See More <i class="fas fa-angle-right"></i></a>';
+            echo'<a href="/admin/adminpage/productlist.php">See More <i class="fas fa-angle-right"></i></a>';
           }
         ?>
       </div>

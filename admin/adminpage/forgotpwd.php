@@ -1,8 +1,8 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
   if(isset($_SESSION['username'])){
-    header('location: /demo/admin/adminpage/dashboard.php?error=youHaveNoAccessOnPage');
+    header('location: /admin/adminpage/dashboard.php?error=youHaveNoAccessOnPage');
   }
 
   if (isset($_GET['Message'])) {
@@ -102,7 +102,7 @@
                 <button class="btn d-grid w-100 send">Send Reset Link</button>
               </form>
               <div class="text-center">
-                <a href="/demo/login.php" class="d-flex align-items-center justify-content-center back-login">
+                <a href="login.php" class="d-flex align-items-center justify-content-center back-login">
                   <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
                   Back to login
                 </a>

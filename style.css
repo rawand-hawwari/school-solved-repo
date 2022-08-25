@@ -42,9 +42,6 @@ body{
 
 
 /* header styling */
-.headercont{
-    flex-grow: .75;
-}
 header nav{
     padding-right: 59px;
     background-color: var(--white);

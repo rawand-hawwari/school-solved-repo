@@ -1,12 +1,12 @@
 <?php
 // Include the database configuration file
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
-  include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
 $statusMsg = '';
 
 // File upload path
-$targetDir = "/demo/image/";
+$targetDir = "/image/";
 $fileName = $_POST['file'];
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);

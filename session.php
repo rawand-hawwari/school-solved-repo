@@ -1,5 +1,5 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
+   include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
 
    
    if (session_status() === PHP_SESSION_NONE) {

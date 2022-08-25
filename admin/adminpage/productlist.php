@@ -1,9 +1,9 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/demo/admin/configration/config.php');
-   include($_SERVER['DOCUMENT_ROOT'] . '/demo/session.php');
+   include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
+   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
    if(!isset($_SESSION['username'])){
-     header('location: /demo/product.php?error=youHaveNoAccessOnPage');
+     header('location: product.php?error=youHaveNoAccessOnPage');
    }
    else{
     $username = $_SESSION['username'];
@@ -48,8 +48,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="/demo/style.css">
-    <link rel="stylesheet" href="/demo/admin/adminpage/admin.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="/admin/adminpage/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -82,7 +82,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- header -->
-            <?php  include_once '../../header.php';?>
+            <?php  include_once '../../header.php'?>
             <!-- /header -->
             
             <!-- Content -->
@@ -230,6 +230,6 @@
       <!-- Overlay -->
     </div>
 
-    <script src="/demo/jshome.js"></script> 
+    <script src="../../jshome.js"></script> 
   </body>
 </html>
