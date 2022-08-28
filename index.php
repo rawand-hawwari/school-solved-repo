@@ -25,7 +25,7 @@
     }
   }
   if(isset($_SESSION['username'])){
-    header('location: /admin/adminpage/dashboard.php?error=youAreSignedin');
+    // header('location: /admin/adminpage/dashboard.php?error=youAreSignedin');
   }
 
 ?>
@@ -144,7 +144,7 @@
                 <button id="play" onclick="magnificPopup()" class="btn btn-sm btn-block"><i class="fas fa-play"></i></button>
                 <!-- popup video -->
                 <div class="modal is-hide popvid">
-                  <iframe width="80%" height="80%"  src="https://www.youtube.com/embed/IFTZtuXKzFs" frameborder="0" allowfullscreen></iframe>
+                  <iframe width="80%" height="80%"  src="https://www.youtube.com/embed/QmpTkkaKYSU" frameborder="0" allowfullscreen></iframe>
                   <a class="modal-close js-modal-close close">X</a>
                 </div>
 

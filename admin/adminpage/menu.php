@@ -94,7 +94,7 @@
         ?>
         <!-- Articles -->
         <li class="menu-item">
-          <a href="#" class="menu-link">
+          <a href="articles.php" class="menu-link">
             <i class="menu-icon tf-icons bx bx-file"></i>
             <div data-i18n="User interface">Articles</div>
           </a>
@@ -104,7 +104,7 @@
         <li class="menu-item">
           <a href="subscribelist.php" class="menu-link">
             <i class="menu-icon tf-icons bx bx-book-reader"></i>
-            <div data-i18n="Extended UI">Subscribes</div>
+            <div data-i18n="Extended UI">Subscription</div>
           </a>
         </li>
         

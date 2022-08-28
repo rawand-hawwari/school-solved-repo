@@ -76,60 +76,102 @@
           <div class="content-wrapper">
           
           <!-- header -->
-          <?php  include_once '../../header.php';?>
+          <?php  include_once '../../header.php'?>
           <!-- /header -->
           
           <!-- Content -->
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Subscription List</span>
-              </h4>
-              
-              
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card mb-4">
-                    <!-- <h5 class="card-header">Users Details</h5> -->
-                    <!-- Account -->
-                    <hr class="my-0" />
-                    <div class="card-body">
-                      <?php
-                        $sql = "SELECT * FROM subscribes";
-                        $result = mysqli_query($db,$sql);
+          <div class="container-xxl flex-grow-1 container-p-y mt-5">
+            <section class="livevedio">
+              <div class='reels card mb-4 mt-5'>
+                <div class="card-header d-flex justify-content-between p-4">
+                  <h5 class="m-0 align-self-center">Subscription List</h5>
+                </div>
+                <div class='card-body row justify-content-start mt-4'>
+                  <?php
 
-                        echo '<div class="row">';
+                    if(isset($_GET['page'])){
+                      $page = $_GET['page'];
+                    }else $page="";
 
-                      while($row = $result -> fetch_assoc()){
-                        echo '<div class="col-md-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <h3 class="text-dark mt-2">' . $row['fullname'] . '</h3>
-                                    <p class="text-secondary mb-0">' . $row['email'] . '</p>
-                                    <p class="text-secondary">' . $row['phone'] . '</p>
-                                </div>
-                                <div class="card-header">
-                                    <h5 class="text-dark">' . $row['message'] . '</h5>
-                                </div>
-                                <p class="card-footer text-secondary mb-0">' . $row['publishDate'] . '</p>
-                            </div>
-                            </div>';
-                      }
-                        echo '</div>';
-                      ?>
 
-                    </div>
-                    <!-- /Account -->
-                  </div>
+                    if($page == "" || $page == "1"){
+                      $page="1";
+                    }
+
+                    $start = 10 * ($page - 1);
+                    $rows = 10;
+
+                    $sql = "SELECT * FROM subscribes LIMIT $start,$rows";
+                    $result = mysqli_query($db,$sql);
+
+                    $sql = "SELECT * FROM subscribes";
+                    $result = mysqli_query($db,$sql);
+
+                    echo '<div class="row">';
+
+                    while($row = $result -> fetch_assoc()){
+                      echo '<div class="col-md-6">
+                          <div class="card mb-4">
+                              <div class="card-header">
+                                  <h3 class="text-dark mt-2">' . $row['fullname'] . '</h3>
+                                  <p class="text-secondary mb-0">' . $row['email'] . '</p>
+                                  <p class="text-secondary">' . $row['phone'] . '</p>
+                              </div>
+                              <div class="card-header">
+                                  <h5 class="text-dark">' . $row['message'] . '</h5>
+                              </div>
+                              <p class="card-footer text-secondary mb-0">' . $row['publishDate'] . '</p>
+                          </div>
+                          </div>';
+                    }
+                      echo '</div>';
+                  ?>
+                </div>
+                <div class="card-footer p-3">
+                  <?php
+                  $sql2 = "SELECT * FROM subscribes";
+                  $resl = mysqli_query($db,$sql2);
+                  $count = $resl->num_rows;
+
+                  if(isset($_GET['page'])){
+                    $page = $_GET['page'];
+                  }else $page="";
+
+
+                  if($page == "" || $page == "1"){
+                    $page="1";
+                  }
+
+                  $next = $page + 1;
+                  $prev = $page - 1;
+
+                  $pages = ceil($count/10);
+
+
+                  echo'<ul class="pagination justify-content-center m-0">';
+                  echo'<li class="page-item ';
+                    if($prev == "0"){echo'disabled';} 
+                  echo'"><a class="page-link" href="articles.php?page=' . $prev . '">Previous</a></li>';
+                  for($b = 1; $b <= $pages; $b++){
+                    echo'<li class="page-item"><a class="page-link" href="articles.php?page=' . $b . '">' . $b . '</a></li>';
+                  }
+                  echo'<li class="page-item ';
+                    if($next == ($pages + 1)){echo'disabled';} 
+                  echo'"><a class="page-link" href="articles.php?page=' . $next . '">Next</a></li>';
+                  
+                  echo'</ul>';
+                  ?>
                 </div>
               </div>
-            </div>
-            <!-- / Content -->
+            </section>
+          </div>
+          <!-- / Content -->
 
-            <!-- Footer -->
-            <?php  include_once '../../footer.php'?>
-            <!-- / Footer -->
+          <!-- Footer -->
+          <?php  include_once '../../footer.php'?>
+          <!-- / Footer -->
 
-            <div class="content-backdrop fade"></div>
+          <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
         </div>

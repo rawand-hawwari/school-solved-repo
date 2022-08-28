@@ -85,3 +85,7 @@
 .user-page .confirm-delete:hover{
     color: var(--white);
 }
+
+.ck.ck-content.ck-editor__editable{
+    min-height: 300px;
+}
