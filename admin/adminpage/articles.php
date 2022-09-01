@@ -2,10 +2,10 @@
    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-   if(!isset($_SESSION['username'])){
+   if(!isset($_SESSION['username'])) {
      header('location: product.php?error=youHaveNoAccessOnPage');
    }
-   else{
+   else {
     $username = $_SESSION['username'];
     $sql = "SELECT role FROM user WHERE username = '$username' OR email='$username';";
     $result = $db->query($sql);
@@ -75,10 +75,8 @@
 
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-
         <!-- Layout container -->
         <div class="layout-page">
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- header -->
@@ -96,12 +94,12 @@
                   <div class='card-body row justify-content-start'>
                     <?php
 
-                      if(isset($_GET['page'])){
+                      if(isset($_GET['page'])) {
                         $page = $_GET['page'];
                       }else $page="";
 
 
-                      if($page == "" || $page == "1"){
+                      if($page == "" || $page == "1") {
                         $page="1";
                       }
 
@@ -113,7 +111,7 @@
 
                       echo '<div class="row">';
 
-                      while($row = $result -> fetch_assoc()){
+                      while($row = $result -> fetch_assoc()) {
                         echo '<div class="col-md-6">
                                 <div class="card mb-4">
                                   <div class="card-body">' .
@@ -121,7 +119,7 @@
                                  '</div>
                                   <div class="card-footer text-secondary mb-0">
                                   <p>' . $row['created'] . '</p>';
-                                 if($row['updated'] != NULL){
+                                 if($row['updated'] != NULL) {
                                   echo 'Last update ' . $row['updated'];
                                  }
 
@@ -139,12 +137,12 @@
                     $resl = mysqli_query($db,$sql2);
                     $count = $resl->num_rows;
 
-                    if(isset($_GET['page'])){
+                    if(isset($_GET['page'])) {
                       $page = $_GET['page'];
                     }else $page="";
 
 
-                    if($page == "" || $page == "1"){
+                    if($page == "" || $page == "1") {
                       $page="1";
                     }
 
@@ -156,13 +154,13 @@
 
                     echo'<ul class="pagination justify-content-center m-0">';
                     echo'<li class="page-item ';
-                      if($prev == "0"){echo'disabled';}
+                      if($prev == "0") {echo'disabled';}
                     echo'"><a class="page-link" href="articles.php?page=' . $prev . '">Previous</a></li>';
-                    for($b = 1; $b <= $pages; $b++){
+                    for($b = 1; $b <= $pages; $b++) {
                       echo'<li class="page-item"><a class="page-link" href="articles.php?page=' . $b . '">' . $b . '</a></li>';
                     }
                     echo'<li class="page-item ';
-                      if($next == ($pages + 1)){echo'disabled';}
+                      if($next == ($pages + 1)) {echo'disabled';}
                     echo'"><a class="page-link" href="articles.php?page=' . $next . '">Next</a></li>';
 
                     echo'</ul>';
@@ -178,12 +176,9 @@
             <!-- / Footer -->
 
           </div>
-          <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
       </div>
-
-      <!-- Overlay -->
     </div>
 
     <script src="../../jshome.js"></script>

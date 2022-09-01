@@ -1,12 +1,12 @@
 <?php
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-  if(!isset($_SESSION['username'])){
+  if(!isset($_SESSION['username'])) {
     header('location: index.php?error=youHaveNoAccessOnPage');
   }
 
   if (isset($_GET['Message'])) {
-    if($_GET['Message'] == "successful_log_in"){
+    if($_GET['Message'] == "successful_log_in") {
 
       echo'<button type="button" class="btn btn-primary d-none show-error" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>';
       echo'<div class="modal fade" id="exampleModal" tabindex="-1">
@@ -19,7 +19,7 @@
                   <p>user have logged in.</p>
                 </div>
                 <div class="modal-footer">
-                  <a type="button" class="btn btn-primary" href="dashboard.php">OK</a>                  
+                  <a type="button" class="btn btn-primary" href="dashboard.php">OK</a>
                 </div>
               </div>
             </div>
@@ -98,10 +98,8 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-
         <!-- Layout container -->
         <div class="layout-page">
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
@@ -142,7 +140,7 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    
-    <script src="../../jshome.js"></script> 
+
+    <script src="../../jshome.js"></script>
   </body>
 </html>

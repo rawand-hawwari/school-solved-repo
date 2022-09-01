@@ -2,7 +2,7 @@
    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-   if(!isset($_SESSION['username'])){
+   if(!isset($_SESSION['username'])) {
      header('location: index.php?error=youHaveNoAccessOnPage');
      exit;
    }
@@ -99,27 +99,26 @@
 
                         echo '<div class="row">';
 
-                      while($row = $result -> fetch_assoc()){
-                        echo '<div class="col-md-12">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <h4 class="text-dark mt-2">Name: ' . $row['firstname'] . " " . $row['lastname'] . '</h4>
-                                    <p class="text-secondary">' . $row['username'] . '</p>
-                                </div>
-                                <div class="card-header p-4">
-                                    <h5 class="text-dark">Email: ' . $row['email'] . '</h5>
-                                    <h5 class="text-dark">Role: ' . $row['role'] . '</h5>
-                                </div>
+                        while($row = $result -> fetch_assoc()) {
+                          echo '<div class="col-md-12">
+                              <div class="card mb-4">
+                                  <div class="card-header">
+                                      <h4 class="text-dark mt-2">Name: ' . $row['firstname'] . " " . $row['lastname'] . '</h4>
+                                      <p class="text-secondary">' . $row['username'] . '</p>
+                                  </div>
+                                  <div class="card-header p-4">
+                                      <h5 class="text-dark">Email: ' . $row['email'] . '</h5>
+                                      <h5 class="text-dark">Role: ' . $row['role'] . '</h5>
+                                  </div>
 
-                                <div class= "card-footer text-end">
-                                    <a class="btn me-2 add" href="editprofile.php">Edit</a>
-                                </div>
-                            </div>
-                            </div>';
-                      }
+                                  <div class= "card-footer text-end">
+                                      <a class="btn me-2 add" href="editprofile.php">Edit</a>
+                                  </div>
+                              </div>
+                              </div>';
+                        }
                         echo '</div>';
                       ?>
-
                     </div>
                     <!-- /Account -->
                   </div>
@@ -131,16 +130,10 @@
             <!-- Footer -->
             <?php  include_once '../../footer.php'?>
             <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
           </div>
-          <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
       </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
     </div>
 
     <script src="../../jshome.js"></script>

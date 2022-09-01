@@ -6,16 +6,16 @@
   // File upload path
   $editorContent = $_POST['editor'];
 
-  if(!empty($editorContent)){
+  if(!empty($editorContent)) {
     $date = date("d/m/y g:i a");
     $insert = $db->query("INSERT INTO articles (content, created) VALUES ('$editorContent', $date)");
 
-    if($insert){
+    if($insert) {
         header('location: ../articles.php?message=productSuccessfulyAdded');
-    }else{
+    }else {
       header("location: ../addarticle.php?error=addfailed");
     }
-  }else{
+  }else {
     header("location: ../addarticle.php?error=emptyInput");
   }
 ?>

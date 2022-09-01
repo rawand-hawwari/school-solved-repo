@@ -1,15 +1,15 @@
 <?php
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-  if(isset($_SESSION['username'])){
+  if(isset($_SESSION['username'])) {
     header('location: /admin/adminpage/dashboard.php?error=youHaveNoAccessOnPage');
   }
 
   if (isset($_GET['Message'])) {
-    if($_GET['Message'] == "successful_log_in"){
+    if($_GET['Message'] == "successful_log_in") {
       echo "<script type='text/javascript'>alert('user have logged in');
       </script>";
-    
+
     }
   }
 ?>

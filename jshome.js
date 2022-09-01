@@ -44,7 +44,7 @@ const validateEmail = (email) => {
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$('.submetion').submit(function(e){
+$('.submetion').submit(function(e) {
     console.log('suvmit form');
     e.preventDefault();
     const email = $('#email').val();
@@ -60,7 +60,7 @@ $('.submetion').submit(function(e){
 })
 
 // close the confirm
-$('.ok').on("click",function(){
+$('.ok').on("click",function() {
     console.log("entered");
 
     $('#valid').addClass('d-none');

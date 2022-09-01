@@ -1,1 +1,72 @@
-/*# sourceMappingURL=admin.css.map */
+.headercont {
+  flex-grow: 0.75;
+}
+
+/* add user page */
+.adduser-page {
+  background-color: #F5F5F9;
+}
+
+.add {
+  color: #FFFFFF;
+  background-color: #96BB7C;
+  outline-color: #96BB7C;
+}
+
+/* end add user page */
+/* menu page */
+.menu a {
+  text-decoration: none;
+}
+
+/* end menu page */
+/* menu page */
+.menupage {
+  float: left;
+}
+
+/* end menu page */
+.username {
+  color: #96BB7C;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner:before {
+  content: none;
+}
+
+.light-style .authentication-wrapper.authentication-basic .authentication-inner:after {
+  content: none;
+}
+
+.set-password-page {
+  background-color: #EFF8ED;
+}
+.set-password-page .send {
+  background-color: #96BB7C;
+  color: #FFFFFF;
+  border-color: #96BB7C;
+}
+.set-password-page .back-login {
+  color: #96BB7C;
+}
+.set-password-page .back-login:hover {
+  color: #737373;
+}
+
+.user-page .prod-pic {
+  width: 100%;
+  height: auto;
+}
+.user-page .pic-col {
+  width: 10%;
+}
+.user-page .confirm-delete {
+  color: #E74040;
+}
+.user-page .confirm-delete:hover {
+  color: #FFFFFF;
+}
+
+.ck.ck-content.ck-editor__editable {
+  min-height: 300px;
+}/*# sourceMappingURL=admin.css.map */

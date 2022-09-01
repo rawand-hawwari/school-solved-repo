@@ -1,8 +1,7 @@
 <?php
   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-
-  if(!isset($_SESSION['username'])){
+  if(!isset($_SESSION['username'])) {
     header('location: index.php?error=youHaveNoAccessOnPage');
   }
 
@@ -10,11 +9,10 @@
   if (isset($_GET['Message'])) {
     $id = $_GET['Message'];
   }
-  else{
+  else {
     header('location: /admin/adminpage/productlist.php?error=noItemSelected');
   }
 ?>
-
 
 <!DOCTYPE html>
 <html
@@ -61,7 +59,6 @@
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <!-- Page CSS -->
-
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 
@@ -71,32 +68,28 @@
   </head>
 
   <body class="adduser-page">
-  
+
     <!-- header and menu -->
     <?php  include_once 'menu.php'?>
 
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-
         <!-- Layout container -->
         <div class="layout-page">
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
                 <span class="text-muted fw-light">Edit Product/</span>
                 " Products
               </h4>
-              
               <?php
 
                 $sql = "SELECT * FROM products WHERE id = " . $id;
                 $result = mysqli_query($db,$sql);
-                $row = $result -> fetch_assoc();              
+                $row = $result -> fetch_assoc();
               ?>
               <div class="row">
                 <div class="col-md-12">
@@ -156,19 +149,12 @@
             <!-- Footer -->
             <?php  include_once '../../footer.php'?>
             <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
           </div>
-          <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
       </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -191,6 +177,6 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script src="../../jshome.js"></script> 
+    <script src="../../jshome.js"></script>
   </body>
 </html>

@@ -2,10 +2,10 @@
    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-   if(!isset($_SESSION['username'])){
+   if(!isset($_SESSION['username'])) {
      header('location: product.php?error=youHaveNoAccessOnPage');
    }
-   else{
+   else {
     $username = $_SESSION['username'];
     $sql = "SELECT role FROM user WHERE username = '$username' OR email='$username';";
     $result = $db->query($sql);
@@ -68,7 +68,7 @@
     <script src="../assets/js/config.js"></script>
   </head>
 
-  <body class="user-page"> 
+  <body class="user-page">
     <!-- Menu -->
     <?php  include_once 'menu.php';?>
     <!-- / Menu -->
@@ -84,7 +84,7 @@
             <!-- header -->
             <?php  include_once '../../header.php'?>
             <!-- /header -->
-            
+
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y mt-5">
               <section class="livevedio">
@@ -96,12 +96,12 @@
                   <div class='card-body row justify-content-start'>
                     <?php
 
-                      if(isset($_GET['page'])){
+                      if(isset($_GET['page'])) {
                         $page = $_GET['page'];
                       }else $page="";
 
 
-                      if($page == "" || $page == "1"){
+                      if($page == "" || $page == "1") {
                         $page="1";
                       }
 
@@ -125,52 +125,49 @@
                       </tr>
                       </thead>
                       <tbody>";
-                      
-                      while($row = $result -> fetch_assoc())
-                      {
-                          echo "<tr>";
-                          echo "<td>" . $row['id'] . "</td>";
-                          echo "<td class='pic-col'> <img class='prod-pic' src='" . $row['img'] . "' alt></td>";
-                          echo "<td>" . $row['name'] . "</td>";
-                          echo "<td>" . $row['details'] . "</td>";
-                          echo "<td>" . $row['price'] . "</td>";
-                          echo "<td>" . $row['sale'] . "</td>";
-                          echo "<td>" . $row['addDate'] . "</td>";
-                          echo "<td>" . $row['updateDate'] . "</td>";
-                          echo '<td>
-                                  <a class="btn btn-outline-secondary d-flex" href="editproduct.php?Message=' . $row['id'] . '">
-                                    <i class="far fa-edit me-2 align-self-center"></i>
-                                    <span class="align-middle">Edit</span>
-                                  </a>
-                                </td>';
-                          echo "<td>
-                                  <div>
-                                    <a class='btn btn-outline-danger confirm-delete d-flex' data-bs-toggle='modal' data-bs-target='#confirm" . $row['id'] . "'>
-                                      <i class='far fa-trash-alt me-2 align-self-center'></i>
-                                      <span class='align-middle'>Delete</span>
-                                    </a>
 
-                                    <div class='modal fade' id='confirm" . $row['id'] . "' tabindex='-1'>
-                                      <div class='modal-dialog'>
-                                        <div class='modal-content'>
-                                          <div class='modal-header'>
-                                            <h5 class='modal-title'>System</h5>
-                                          </div>
-                                          <div class='modal-body'>
-                                            <h4 class ='text-center'>Are you sure you want to delete this data?</h4>
-                                          </div>
-                                          <div class='modal-footer'>
-                                            <button type='button' class='btn btn-danger px-3' data-bs-dismiss='modal'>No</button>
-                                            <a type='button' class='btn btn-success px-3' href='includes/delete.php?Message=" . $row['id'] . "'>Yes</a>
-                                          </div>
+                      while($row = $result -> fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row['id'] . "</td>";
+                        echo "<td class='pic-col'> <img class='prod-pic' src='" . $row['img'] . "' alt></td>";
+                        echo "<td>" . $row['name'] . "</td>";
+                        echo "<td>" . $row['details'] . "</td>";
+                        echo "<td>" . $row['price'] . "</td>";
+                        echo "<td>" . $row['sale'] . "</td>";
+                        echo "<td>" . $row['addDate'] . "</td>";
+                        echo "<td>" . $row['updateDate'] . "</td>";
+                        echo '<td>
+                                <a class="btn btn-outline-secondary d-flex" href="editproduct.php?Message=' . $row['id'] . '">
+                                  <i class="far fa-edit me-2 align-self-center"></i>
+                                  <span class="align-middle">Edit</span>
+                                </a>
+                              </td>';
+                        echo "<td>
+                                <div>
+                                  <a class='btn btn-outline-danger confirm-delete d-flex' data-bs-toggle='modal' data-bs-target='#confirm" . $row['id'] . "'>
+                                    <i class='far fa-trash-alt me-2 align-self-center'></i>
+                                    <span class='align-middle'>Delete</span>
+                                  </a>
+
+                                  <div class='modal fade' id='confirm" . $row['id'] . "' tabindex='-1'>
+                                    <div class='modal-dialog'>
+                                      <div class='modal-content'>
+                                        <div class='modal-header'>
+                                          <h5 class='modal-title'>System</h5>
+                                        </div>
+                                        <div class='modal-body'>
+                                          <h4 class ='text-center'>Are you sure you want to delete this data?</h4>
+                                        </div>
+                                        <div class='modal-footer'>
+                                          <button type='button' class='btn btn-danger px-3' data-bs-dismiss='modal'>No</button>
+                                          <a type='button' class='btn btn-success px-3' href='includes/delete.php?Message=" . $row['id'] . "'>Yes</a>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                </td>";
-                          
-                          
-                          echo "</tr>";
+                                </div>
+                              </td>";
+                        echo "</tr>";
                       }
                       echo "</tbody>
                             </table>";
@@ -183,12 +180,12 @@
                     $resl = mysqli_query($db,$sql2);
                     $count = $resl->num_rows;
 
-                    if(isset($_GET['page'])){
+                    if(isset($_GET['page'])) {
                       $page = $_GET['page'];
                     }else $page="";
 
 
-                    if($page == "" || $page == "1"){
+                    if($page == "" || $page == "1") {
                       $page="1";
                     }
 
@@ -200,15 +197,14 @@
 
                     echo'<ul class="pagination justify-content-center m-0">';
                     echo'<li class="page-item ';
-                      if($prev == "0"){echo'disabled';} 
+                      if($prev == "0") {echo'disabled';}
                     echo'"><a class="page-link" href="productlist.php?page=' . $prev . '">Previous</a></li>';
-                    for($b = 1; $b <= $pages; $b++){
+                    for($b = 1; $b <= $pages; $b++) {
                       echo'<li class="page-item"><a class="page-link" href="productlist.php?page=' . $b . '">' . $b . '</a></li>';
                     }
                     echo'<li class="page-item ';
-                      if($next == ($pages + 1)){echo'disabled';} 
+                      if($next == ($pages + 1)) {echo'disabled';}
                     echo'"><a class="page-link" href="productlist.php?page=' . $next . '">Next</a></li>';
-                    
                     echo'</ul>';
                     ?>
                   </div>
@@ -220,16 +216,12 @@
             <!-- Footer -->
             <?php  include_once '../../footer.php'?>
             <!-- / Footer -->
-
           </div>
-          <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
       </div>
-
-      <!-- Overlay -->
     </div>
 
-    <script src="../../jshome.js"></script> 
+    <script src="../../jshome.js"></script>
   </body>
 </html>

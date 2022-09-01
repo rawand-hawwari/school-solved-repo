@@ -4,10 +4,10 @@
 
   $table = "";
 
-  if (str_contains($_SERVER['HTTP_REFERER'], 'userlist')) { 
+  if (str_contains($_SERVER['HTTP_REFERER'], 'userlist')) {
     $table = 'user';
   }
-  else if (str_contains($_SERVER['HTTP_REFERER'], 'productlist')){
+  else if (str_contains($_SERVER['HTTP_REFERER'], 'productlist')) {
     $table = 'products';
   }
 
@@ -16,7 +16,7 @@
       $db->query($sql);
       header('location: ' . $_SERVER['HTTP_REFERER']);
   }
-  else{
+  else {
     header('location:' . $_SERVER['HTTP_REFERER'] . '?error=failedtodelete');
   }
 

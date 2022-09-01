@@ -41,12 +41,13 @@
               </li>
             </ul>
             <div class="login-wrapper d-block d-lg-flex login-out">
-            <?php if(!isset($_SESSION['username'])) {
-              echo '<a class="nav-link login" href="login.php">Login</a>
-              <a class="btn btn-primary rounded" href="#" >join us <i class="fas fa-arrow-right"></i></a> ';
-            }else {
-              include_once 'admin/adminpage/usermenu.php';
-            }?>
+              <?php if(!isset($_SESSION['username'])) {
+                echo '<a class="nav-link login" href="login.php">Login</a>
+                <a class="btn btn-primary rounded" href="#" >join us <i class="fas fa-arrow-right"></i></a> ';
+                }else {
+                  include_once 'admin/adminpage/usermenu.php';
+                }
+              ?>
             </div>
           </div>
         </div>

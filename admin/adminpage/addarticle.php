@@ -1,11 +1,10 @@
 <?php
-   include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
-   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
+  include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-  if(!isset($_SESSION['username'])){
+  if(!isset($_SESSION['username'])) {
     header('location: index.php?error=youHaveNoAccessOnPage');
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +54,6 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
-
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 
@@ -76,10 +74,8 @@
 
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-
         <!-- Layout container -->
         <div class="layout-page">
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
@@ -102,6 +98,7 @@
                         <div class="mt-2">
                           <button type="submit" class="btn me-2 add" name="submit ">Add</button>
                           <a type="reset" class="btn btn-outline-secondary" href ="/admin/adminpage/articles.php">Cancel</a>
+                        </div>
                       </form>
                     </div>
                     <!-- /Account -->

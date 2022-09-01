@@ -2,8 +2,7 @@
    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-
-  if(isset($_SESSION['username'])){
+  if(isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
     $sql = "SELECT role FROM user WHERE username = '$username' OR email='$username';";
     $result = $db->query($sql);
@@ -49,7 +48,6 @@
             <div data-i18n="Analytics">Home</div>
           </a>
         </li>
-
         <!-- Layouts -->
         <li class="menu-item">
           <a href="#" class="menu-link">
@@ -57,7 +55,6 @@
             <div data-i18n="Layouts">Layouts</div>
           </a>
         </li>
-
         <li class="menu-header small text-uppercase">
           <span class="menu-header-text">Pages</span>
         </li>
@@ -83,7 +80,7 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
         <!-- User List -->
         <?php
-          if($role == 'admin'){
+          if($role == 'admin') {
             echo'<li class="menu-item">
                   <a href="userlist.php" class="menu-link">
                     <i class="menu-icon tf-icons bx bxs-group"></i>
@@ -107,7 +104,7 @@
             <div data-i18n="Extended UI">Subscription</div>
           </a>
         </li>
-        
+
         <!-- Cards -->
         <li class="menu-item">
           <a href="#" class="menu-link">

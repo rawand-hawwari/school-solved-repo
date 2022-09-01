@@ -2,8 +2,7 @@
   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
   if (isset($_GET['Message'])) {
-    if($_GET['Message'] == "successful_log_out"){
-
+    if($_GET['Message'] == "successful_log_out") {
       echo'<button type="button" class="btn btn-primary d-none show-error" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>';
       echo'<div class="modal fade" id="exampleModal" tabindex="-1">
             <div class="modal-dialog">
@@ -20,10 +19,10 @@
               </div>
             </div>
           </div>
-        ';
+      ';
     }
   }
-  if(isset($_SESSION['username'])){
+  if(isset($_SESSION['username'])) {
     header('location: /admin/adminpage/dashboard.php?error=youAreSignedin');
   }
 ?>
@@ -98,11 +97,9 @@
           <div class="col-12 col-lg-5">
             <img src="image/pic-2.jpg" alt="" width="269px" height="352px">
           </div>
-
           <div class="col-12 col-lg-6">
             <div class="packagecont me-2 me-lg-5 text-start">
               <h2 >Approdable Packages</h2>
-
               <p >Problems trying to resolve the conflict between
                  the two major realms of Classical physics:
                  Newtonian mechanics </p>

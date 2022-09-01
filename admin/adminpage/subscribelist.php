@@ -2,7 +2,7 @@
    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
    include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-   if(!isset($_SESSION['username'])){
+   if(!isset($_SESSION['username'])) {
      header('location: index.php?error=youHaveNoAccessOnPage');
    }
 ?>
@@ -61,7 +61,7 @@
     <script src="../assets/js/config.js"></script>
   </head>
 
-  <body class="user-page"> 
+  <body class="user-page">
     <?php
         // include_once('../../header.php');
         include_once('menu.php');
@@ -74,11 +74,11 @@
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
-          
+
           <!-- header -->
           <?php  include_once '../../header.php'?>
           <!-- /header -->
-          
+
           <!-- Content -->
           <div class="container-xxl flex-grow-1 container-p-y mt-5">
             <section class="livevedio">
@@ -89,12 +89,12 @@
                 <div class='card-body row justify-content-start mt-4'>
                   <?php
 
-                    if(isset($_GET['page'])){
+                    if(isset($_GET['page'])) {
                       $page = $_GET['page'];
                     }else $page="";
 
 
-                    if($page == "" || $page == "1"){
+                    if($page == "" || $page == "1") {
                       $page="1";
                     }
 
@@ -109,7 +109,7 @@
 
                     echo '<div class="row">';
 
-                    while($row = $result -> fetch_assoc()){
+                    while($row = $result -> fetch_assoc()) {
                       echo '<div class="col-md-6">
                           <div class="card mb-4">
                               <div class="card-header">
@@ -124,7 +124,7 @@
                           </div>
                           </div>';
                     }
-                      echo '</div>';
+                    echo '</div>';
                   ?>
                 </div>
                 <div class="card-footer p-3">
@@ -133,12 +133,12 @@
                   $resl = mysqli_query($db,$sql2);
                   $count = $resl->num_rows;
 
-                  if(isset($_GET['page'])){
+                  if(isset($_GET['page'])) {
                     $page = $_GET['page'];
                   }else $page="";
 
 
-                  if($page == "" || $page == "1"){
+                  if($page == "" || $page == "1") {
                     $page="1";
                   }
 
@@ -150,15 +150,14 @@
 
                   echo'<ul class="pagination justify-content-center m-0">';
                   echo'<li class="page-item ';
-                    if($prev == "0"){echo'disabled';} 
+                    if($prev == "0") {echo'disabled';}
                   echo'"><a class="page-link" href="articles.php?page=' . $prev . '">Previous</a></li>';
-                  for($b = 1; $b <= $pages; $b++){
+                  for($b = 1; $b <= $pages; $b++) {
                     echo'<li class="page-item"><a class="page-link" href="articles.php?page=' . $b . '">' . $b . '</a></li>';
                   }
                   echo'<li class="page-item ';
-                    if($next == ($pages + 1)){echo'disabled';} 
+                    if($next == ($pages + 1)) {echo'disabled';}
                   echo'"><a class="page-link" href="articles.php?page=' . $next . '">Next</a></li>';
-                  
                   echo'</ul>';
                   ?>
                 </div>
@@ -170,18 +169,12 @@
           <!-- Footer -->
           <?php  include_once '../../footer.php'?>
           <!-- / Footer -->
-
-          <div class="content-backdrop fade"></div>
           </div>
-          <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
       </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
     </div>
 
-    <script src="../../jshome.js"></script> 
+    <script src="../../jshome.js"></script>
   </body>
 </html>
