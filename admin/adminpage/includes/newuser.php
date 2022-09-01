@@ -1,11 +1,7 @@
 <?php
-  
   include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
   include($_SERVER['DOCUMENT_ROOT'] . '/session.php');
 
-
-  
-   
     $fname = $_POST["firstName"];
     $lname = $_POST["lastName"];
     $username = $_POST["username"];
@@ -25,7 +21,7 @@
     if(invalidUsername($username) !== false){
         header("location:../addUser.php?error=invaliduid");
         exit();
-    }    
+    }
     if(invalidEmail($email) !== false){
         header("location:../addUser.php?error=invalidemail");
         exit();

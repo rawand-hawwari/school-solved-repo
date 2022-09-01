@@ -42,8 +42,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="/admin/adminpage/admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -62,7 +62,7 @@
     <script src="../assets/js/config.js"></script>
   </head>
 
-  <body class="user-page"> 
+  <body class="user-page">
     <?php
         // include_once('../../header.php');
         include_once('menu.php');
@@ -75,18 +75,16 @@
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
-          
+
           <!-- header -->
           <?php  include_once '../../header.php';?>
           <!-- /header -->
-          
+
           <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y pt-5 mt-5">
               <h4 class="fw-bold py-3 mb-4">
                 <span class="text-muted fw-light">Account</span>
               </h4>
-              
-              
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
@@ -145,6 +143,6 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
 
-    <script src="../../jshome.js"></script> 
+    <script src="../../jshome.js"></script>
   </body>
 </html>

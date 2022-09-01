@@ -41,8 +41,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="/admin/adminpage/admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />

@@ -624,27 +624,6 @@ footer{
 .login-signin .sign-with{
     color: var(--maincolor);
 }
-
-
-/* register */
-/* style="border-radius: 15px;" */
-.regist-page{
-    background-color: #defbc9;
-}
-
-.register a{
-    text-decoration: none;
-    color: var(--maincolor);
-}
-
-.register a:hover{
-    color: var(--grey);
-}
-
-.register .submit{
-    background-color: var(--maincolor);
-    color: var(--white);
-}
 /* end login and register page styling */
 
 

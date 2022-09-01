@@ -43,8 +43,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -64,7 +64,7 @@
   </head>
 
   <body class="adduser-page">
-  
+
     <!-- header and menu -->
     <?php  include_once 'menu.php'?>
 
@@ -84,8 +84,6 @@
                 <span class="text-muted fw-light">Add new user /</span>
                 " Users
               </h4>
-              
-              
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
@@ -102,17 +100,16 @@
                               type="text"
                               id="firstName"
                               name="firstName"
-                              value="John"
                               autofocus
                             />
                           </div>
                           <div class="mb-3 col">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
+                            <input class="form-control" type="text" name="lastName" id="lastName" />
                           </div>
                           <div class="mb-3 col">
                             <label for="lastName" class="form-label">Username</label>
-                            <input class="form-control" type="text" name="username" id="username" value="Doe" />
+                            <input class="form-control" type="text" name="username" id="username" />
                           </div>
                           <div class="mb-3 col">
                             <label for="email" class="form-label">E-mail</label>
@@ -121,7 +118,6 @@
                               type="text"
                               id="email"
                               name="email"
-                              value="john.doe@example.com"
                               placeholder="john.doe@example.com"
                             />
                           </div>
@@ -193,6 +189,6 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script src="../../../jshome.js"></script> 
+    <script src="../../../jshome.js"></script>
   </body>
 </html>

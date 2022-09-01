@@ -43,8 +43,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -64,7 +64,7 @@
   </head>
 
   <body class="adduser-page">
-  
+
     <!-- header and menu -->
     <?php  include_once 'menu.php'?>
 
@@ -81,15 +81,13 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Edit your product /</span>
-                " Products
+                <span class="text-muted fw-light">Edit your profile /</span>
+                 Profiles
               </h4>
-              
-              
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
-                    <h5 class="card-header">Product Details</h5>
+                    <h5 class="card-header">Profile Details</h5>
                     <!-- Account -->
                     <hr class="my-0" />
                     <div class="card-body">

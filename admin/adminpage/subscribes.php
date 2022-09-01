@@ -17,11 +17,11 @@
     include_once 'includes/functions.inc.php';
 
     if(eInputs($fname, $email, $phone, $msg) !== false){
-        header("location: index.php?error=emptyinput");
+        header("location: /index.php?error=emptyinput");
         exit();
     }
     else{
         $sql = "INSERT INTO subscribes (fullname, email, phone, message, publishDate) VALUES ('$fname', '$email', '$phone', '$msg', '$date')";
         $result = $db->query($sql);
-        header("location: index.php?error=none");
+        header("location: /index.php?error=none");
     }

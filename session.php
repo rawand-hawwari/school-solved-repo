@@ -1,7 +1,6 @@
 <?php
    include($_SERVER['DOCUMENT_ROOT'] . '/admin/configration/config.php');
 
-   
    if (session_status() === PHP_SESSION_NONE) {
       session_start();
    }
@@ -12,10 +11,10 @@
 
    if(isset($_SESSION['username'])){
       $user_check = $_SESSION['username'];
-      
+
       $query = "SELECT email,username FROM user WHERE username = '$user_check' or email = '$user_check'";
       $ses_sql = $db->query($query);
-      
+
       $row = $ses_sql -> fetch_assoc();
       if(!isset($row['username'])){
          $login_session = $row['email'];

@@ -59,8 +59,8 @@
     <!-- Page CSS -->
     <!-- Page -->
     <link rel="stylesheet" href="../assets/vendor/css/pages/page-auth.css" />
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
 

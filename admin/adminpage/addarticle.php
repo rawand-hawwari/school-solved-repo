@@ -41,8 +41,8 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -67,7 +67,6 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
   </head>
 
   <body>
@@ -89,8 +88,6 @@
                 <span class="text-muted fw-light">Add new article /</span>
                 " Articles
               </h4>
-              
-              
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
@@ -99,7 +96,7 @@
                     <hr class="my-0" />
                     <div class="card-body ed-frm">
                       <form id="formAccountSettings" method="POST" action="includes/newarticle.php">
-                        <div id="editor">
+                        <div id="">
                           <textarea name="editor" id="editor" cols="60" rows="10"></textarea>
                         </div>
                         <div class="mt-2">
@@ -148,8 +145,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script>
-      CKEDITOR.replace('editor');
+      // CKEDITOR.replace('editor');
     </script>
-    <script src="../../jshome.js"></script> 
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/ckeditor5-build-classic-custom-simpleuploadadapter@28.0.0/build/ckeditor.min.js"></script>
+    <script src="../../jshome.js"></script>
+    <script type="module" src="../../ckeditor.js"></script>
   </body>
 </html>

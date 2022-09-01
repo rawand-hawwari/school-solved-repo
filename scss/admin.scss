@@ -1,0 +1,88 @@
+$maincolor:#96BB7C;
+$darkblue:#252B42;
+$grey:#737373;
+$white:#FFFFFF;
+$red:#E74040;
+$bs-primary:$maincolor;
+$bg-green:#EFF8ED;
+
+.headercont {
+    flex-grow: .75;
+}
+
+/* add user page */
+.adduser-page {
+    background-color: $bs-body-bg;
+}
+
+.add {
+    color: $white;
+    background-color: $maincolor;
+    outline-color: $maincolor;
+}
+/* end add user page */
+
+/* menu page */
+.menu a {
+    text-decoration: none;
+}
+/* end menu page */
+
+/* menu page */
+.menupage {
+    float: left;
+}
+/* end menu page */
+
+.username {
+    color: $maincolor;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner:before {
+    content: none;
+}
+
+.light-style .authentication-wrapper.authentication-basic .authentication-inner:after {
+    content: none;
+}
+
+.set-password-page {
+    background-color: $bg-green;
+
+    & .send {
+        background-color: $maincolor;
+        color: $white;
+        border-color: $maincolor;
+    }
+
+    & .back-login {
+        color: $maincolor;
+
+        &:hover {
+            color: $grey;
+        }
+    }
+}
+
+.user-page {
+    & .prod-pic {
+        width: 100%;
+        height: auto;
+    }
+
+    & .pic-col {
+        width: 10%;
+    }
+
+    & .confirm-delete {
+        color: $red;
+
+        &:hover{
+            color: $white;
+        }
+    }
+}
+
+.ck.ck-content.ck-editor__editable {
+    min-height: 300px;
+}

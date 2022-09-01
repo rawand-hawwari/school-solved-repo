@@ -43,8 +43,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -64,7 +64,7 @@
   </head>
 
   <body class="adduser-page">
-  
+
     <!-- header and menu -->
     <?php  include_once 'menu.php'?>
 
@@ -84,8 +84,6 @@
                 <span class="text-muted fw-light">Add new product /</span>
                 " Products
               </h4>
-              
-              
               <div class="row">
                 <div class="col-md-12">
                   <div class="card mb-4">
@@ -117,7 +115,7 @@
                           </div>
                         </div>
                         <div class="mt-2">
-                          <button type="submit" class="btn me-2 add" name="submit ">Add user</button>
+                          <button type="submit" class="btn me-2 add" name="submit ">Add</button>
                           <button type="reset" class="btn btn-outline-secondary" onclick='window.location.href ="/admin/adminpage/productlist.php"'>Cancel</button>
                         </div>
                       </form>
@@ -167,6 +165,6 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script src="../../../jshome.js"></script> 
+    <script src="../../../jshome.js"></script>
   </body>
 </html>

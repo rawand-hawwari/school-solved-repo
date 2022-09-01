@@ -48,8 +48,8 @@
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="/admin/adminpage/admin.css">
+    <link rel="stylesheet" href="../../scss/style.css">
+    <link rel="stylesheet" href="../../scss/admin.css">
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -68,7 +68,7 @@
     <script src="../assets/js/config.js"></script>
   </head>
 
-  <body class="user-page"> 
+  <body class="user-page">
     <!-- Menu -->
     <?php  include_once 'menu.php';?>
     <!-- / Menu -->
@@ -84,7 +84,7 @@
             <!-- header -->
             <?php  include_once '../../header.php'?>
             <!-- /header -->
-            
+
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y mt-5">
               <section class="livevedio">
@@ -110,19 +110,19 @@
 
                       $sql = "SELECT * FROM articles LIMIT $start,$rows";
                       $result = mysqli_query($db,$sql);
-                      
+
                       echo '<div class="row">';
 
                       while($row = $result -> fetch_assoc()){
                         echo '<div class="col-md-6">
                                 <div class="card mb-4">
-                                  <div class="card-body">' . 
-                                    $row['content'] . 
+                                  <div class="card-body">' .
+                                    $row['content'] .
                                  '</div>
                                   <div class="card-footer text-secondary mb-0">
                                   <p>' . $row['created'] . '</p>';
                                  if($row['updated'] != NULL){
-                                  echo 'Last update ' . $row['updated'];  
+                                  echo 'Last update ' . $row['updated'];
                                  }
 
                         echo     '</div>
@@ -156,15 +156,15 @@
 
                     echo'<ul class="pagination justify-content-center m-0">';
                     echo'<li class="page-item ';
-                      if($prev == "0"){echo'disabled';} 
+                      if($prev == "0"){echo'disabled';}
                     echo'"><a class="page-link" href="articles.php?page=' . $prev . '">Previous</a></li>';
                     for($b = 1; $b <= $pages; $b++){
                       echo'<li class="page-item"><a class="page-link" href="articles.php?page=' . $b . '">' . $b . '</a></li>';
                     }
                     echo'<li class="page-item ';
-                      if($next == ($pages + 1)){echo'disabled';} 
+                      if($next == ($pages + 1)){echo'disabled';}
                     echo'"><a class="page-link" href="articles.php?page=' . $next . '">Next</a></li>';
-                    
+
                     echo'</ul>';
                     ?>
                   </div>
@@ -186,6 +186,6 @@
       <!-- Overlay -->
     </div>
 
-    <script src="../../jshome.js"></script> 
+    <script src="../../jshome.js"></script>
   </body>
 </html>
